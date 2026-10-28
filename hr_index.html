@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HR Analytics Dashboard Report</title>
+<link rel="stylesheet" href="hr_style.css">
+</head>
+<body>
+
+<header class="header">
+    <h1>HR Analytics Dashboard</h1>
+    <p>Prepared By :
+        <b>Manasvi Talati</b>
+    </p>
+    <p>Internship Project – ADKRITY DIGITAL SOLUTIONS PVT LTD</p>
+    <p>Tools Used : MySQL | Python | Power BI | HTML | CSS</p>
+    <p>July 2026</p>
+</header>
+
+<div class="container">
+
+    <h2 class="subtitle">Employee Workforce Analytics Report</h2>
+
+    <div class="kpi-container">
+        <div class="card">
+            <h3>Total Employees</h3>
+            <p>150</p>
+        </div>
+        <div class="card">
+            <h3>Attrition Rate</h3>
+            <p>12.67%</p>
+        </div>
+        <div class="card">
+            <h3>Average Salary</h3>
+            <p>₹33.61K</p>
+        </div>
+        <div class="card">
+            <h3>Average Experience</h3>
+            <p>6.13 Years</p>
+        </div>
+        <div class="card">
+            <h3>Average Performance</h3>
+            <p>3.65 / 5</p>
+        </div>
+    </div>
+
+    <section class="section">
+        <h2>Project Overview</h2>
+        <p>
+        The HR Analytics Dashboard project was developed to analyze workforce
+        performance, employee attrition, salary trends and departmental insights.
+        The project demonstrates the complete data analytics workflow beginning
+        with data storage in MySQL, exploratory data analysis using Python,
+        interactive visualization in Power BI and documentation using HTML
+        and CSS.
+        </p>
+        <p>
+        The dashboard enables management to monitor workforce statistics,
+        employee performance, salary distribution, overtime trends,
+        training participation and employee retention, helping support
+        data-driven HR decision making.
+        </p>
+    </section>
+
+    <section class="section">
+        <h2>Project Objectives</h2>
+        <ul>
+        <li>Analyze workforce demographics and employee distribution.</li>
+        <li>Measure employee attrition across departments.</li>
+        <li>Evaluate salary trends by department and job role.</li>
+        <li>Monitor employee performance and promotion history.</li>
+        <li>Identify overtime and work-life balance patterns.</li>
+        <li>Create interactive dashboards for HR decision making.</li>
+        <li>Provide business recommendations based on HR metrics.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>Tools & Technologies</h2>
+        <table>
+            <tr>
+                <th>Technology</th>
+                <th>Purpose</th>
+            </tr>
+            <tr>
+                <td>MySQL</td>
+                <td>Database Management & SQL Analysis</td>
+            </tr>
+            <tr>
+                <td>Python</td>
+                <td>Data Cleaning & Exploratory Data Analysis</td>
+            </tr>
+            <tr>
+                <td>Pandas</td>
+                <td>Data Manipulation</td>
+            </tr>
+            <tr>
+                <td>Matplotlib & Seaborn</td>
+                <td>Visualization</td>
+            </tr>
+            <tr>
+                <td>Power BI</td>
+                <td>Interactive Dashboard Development</td>
+            </tr>
+            <tr>
+                <td>HTML & CSS</td>
+                <td>Project Documentation</td>
+            </tr>
+        </table>
+    </section>
+
+    <section class="section">
+        <h2>Dataset Information</h2>
+        <table>
+            <tr>
+                <th>Attribute</th>
+                <th>Details</th>
+            </tr>
+            <tr>
+                <td>Total Employees</td>
+                <td>150</td>
+            </tr>
+            <tr>
+                <td>Departments</td>
+                <td>Human Resources, IT, Software Development, Sales,
+                    Marketing, UI/UX, Customer Support,
+                    Finance, Operations
+                </td>
+            </tr>
+            <tr>
+                <td>Education Levels</td>
+                <td>Bachelor, Master, MBA</td>
+            </tr>
+            <tr>
+                <td>Salary Range</td>
+                <td>₹10,000 – ₹70,000</td>
+            </tr>
+            <tr>
+                <td>Performance Score</td>
+                <td>1 to 5</td>
+            </tr>
+            <tr>
+                <td>Joining Years</td>
+                <td>2018 – 2025</td>
+            </tr>
+        </table>
+    </section>
+
+    <section class="section">
+        <h2>Employee Database Schema</h2>
+        <table>
+            <tr>
+                <th>Column Name</th>
+                <th>Description</th>
+            </tr>
+            <tr><td>EmployeeID</td><td>Unique Employee Identifier</td></tr>
+            <tr><td>EmployeeName</td><td>Employee Full Name</td></tr>
+            <tr><td>Age</td><td>Employee Age</td></tr>
+            <tr><td>Gender</td><td>Male / Female</td></tr>
+            <tr><td>Department</td><td>Employee Department</td></tr>
+            <tr><td>JobRole</td><td>Designation</td></tr>
+            <tr><td>Education</td><td>Highest Qualification</td></tr>
+            <tr><td>Salary</td><td>Monthly Salary</td></tr>
+            <tr><td>Experience</td><td>Years of Experience</td></tr>
+            <tr><td>PerformanceScore</td><td>Performance Rating</td></tr>
+            <tr><td>Attrition</td><td>Employee Status</td></tr>
+            <tr><td>WorkLifeBalance</td><td>Rating (1–4)</td></tr>
+            <tr><td>OverTime</td><td>Overtime Status</td></tr>
+            <tr><td>TrainingHours</td><td>Training Completed</td></tr>
+            <tr><td>PromotionLast5Years</td><td>Promotion History</td></tr>
+            <tr><td>JoiningDate</td><td>Date of Joining</td></tr>
+        </table>
+    </section>
+
+    <section class="section">
+        <h2>SQL Analysis Performed</h2>
+        <p>
+            The employee dataset was stored in MySQL and analyzed using SQL queries.
+            Aggregate functions, filtering, grouping and sorting operations were used
+            to understand workforce distribution, employee performance, salary trends
+            and attrition patterns.
+        </p>
+        <table>
+            <tr>
+                <th>Analysis</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Total Employees</td>
+                <td>Calculated the total workforce in the organization.</td>
+            </tr>
+            <tr>
+                <td>Attrition Rate</td>
+                <td>Measured the percentage of employees who left the organization.</td>
+            </tr>
+            <tr>
+                <td>Department-wise Employees</td>
+                <td>Counted employees working in each department.</td>
+            </tr>
+            <tr>
+                <td>Department-wise Attrition</td>
+                <td>Compared employee attrition across departments.</td>
+            </tr>
+            <tr>
+                <td>Average Salary</td>
+                <td>Calculated average salary for each department.</td>
+            </tr>
+            <tr>
+                <td>Top Performing Employees</td>
+                <td>Identified employees with the highest performance scores.</td>
+            </tr>
+            <tr>
+                <td>Overtime Analysis</td>
+                <td>Compared overtime with employee performance.</td>
+            </tr>
+            <tr>
+                <td>Promotion Analysis</td>
+                <td>Analyzed employees promoted within the last five years.</td>
+            </tr>
+                <tr>
+                <td>Experience Analysis</td>
+                <td>Compared experience with average salary.</td>
+            </tr>
+            <tr>
+                <td>Joining Date Analysis</td>
+                <td>Analyzed employee joining trends by year and month.</td>
+            </tr>
+        </table>
+    </section>
+
+    <section class="section">
+        <h2>Python Data Analysis</h2>
+        <p>
+            Python was used to perform data cleaning, exploratory data analysis (EDA),
+            statistical analysis and visualization before building the Power BI dashboard.
+        </p>
+        <table>
+            <tr>
+                <th>Python Task</th>
+                <th>Purpose</th>
+            </tr>
+            <tr>
+                <td>Load Dataset</td>
+                <td>Imported employee dataset using Pandas.</td>
+            </tr>
+            <tr>
+                <td>Dataset Inspection</td>
+                <td>Displayed dataset structure and summary information.</td>
+            </tr>
+            <tr>
+                <td>Missing Value Detection</td>
+                <td>Checked for null or missing records.</td>
+            </tr>
+            <tr>
+                <td>Duplicate Record Detection</td>
+                <td>Validated data quality.</td>
+            </tr>
+            <tr>
+                <td>Salary Distribution</td>
+                <td>Analyzed employee salary ranges.</td>
+            </tr>
+            <tr>
+                <td>Department Distribution</td>
+                <td>Visualized employee count across departments.</td>
+            </tr>
+            <tr>
+                <td>Performance Analysis</td>
+                <td>Compared employee performance ratings.</td>
+            </tr>
+            <tr>
+                <td>Correlation Analysis</td>
+                <td>Measured relationships between salary, experience, training and performance.</td>
+            </tr>
+            <tr>
+                <td>Average Salary Analysis</td>
+                <td>Calculated department-wise average salary.</td>
+            </tr>
+            <tr>
+                <td>Top Employees</td>
+                <td>Displayed highest-performing employees.</td>
+            </tr>
+            <tr>
+                <td>Export Clean Dataset</td>
+                <td>Generated a cleaned CSV for reporting.</td>
+            </tr>
+        </table>
+    </section>
+
+    <section class="section">
+        <h2>HR Key Performance Indicators (KPIs)</h2>
+        <table>
+            <tr>
+                <th>KPI</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Total Employees</td>
+                <td>Total number of employees available in the organization.</td>
+            </tr>
+            <tr>
+                <td>Attrition Rate</td>
+                <td>Percentage of employees who resigned or left the organization.</td>
+            </tr>
+            <tr>
+                <td>Average Salary</td>
+                <td>Average monthly salary of employees.</td>
+            </tr>
+            <tr>
+                <td>Average Experience</td>
+                <td>Average years of professional experience.</td>
+            </tr>
+            <tr>
+                <td>Average Performance Score</td>
+                <td>Average employee performance rating.</td>
+            </tr>
+            <tr>
+                <td>Active Employees</td>
+                <td>Total employees currently working in the organization.</td>
+            </tr>
+        </table>
+    </section>
+
+    <section class="section">
+        <h2>Business Metrics Used</h2>
+        <table>
+            <tr><th>Metric</th><th>Formula / Definition</th></tr>
+            <tr> <td>Attrition Rate</td><td>(Employees Left / Total Employees) × 100</td></tr>
+            <tr><td>Average Salary</td><td>Total Salary ÷ Total Employees</td></tr>
+            <tr><td>Average Experience</td><td>Total Experience ÷ Total Employees</td></tr>
+            <tr><td>Average Performance</td><td>Total Performance Score ÷ Total Employees</td></tr>
+            <tr><td>Department Employee Count</td><td>COUNT(EmployeeID)</td></tr>
+            <tr><td>Training Hours</td><td>Average Training Hours by Department</td></tr>
+         </table>
+    </section>
+
+    <section class="section">
+        <h2>Project Workflow</h2>
+        <div class="workflow">
+            <div class="workflow-box">
+                <h3>Step 1</h3>
+                <p>Dataset Preparation</p>
+            </div>
+            <div class="arrow">➜</div>
+            <div class="workflow-box">
+                <h3>Step 2</h3>
+                <p>MySQL Database</p>
+            </div>
+            <div class="arrow">➜</div>
+            <div class="workflow-box">
+                <h3>Step 3</h3>
+                <p>SQL Analysis</p>
+            </div>
+            <div class="arrow">➜</div>
+            <div class="workflow-box">
+                <h3>Step 4</h3>
+                <p>Python EDA</p>
+            </div>
+            <div class="arrow">➜</div>
+            <div class="workflow-box">
+                <h3>Step 5</h3>
+                <p>Power BI Dashboard</p>
+            </div>
+            <div class="arrow">➜</div>
+            <div class="workflow-box">
+                <h3>Step 6</h3>
+                <p>HTML Report</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Business Insights</h2>
+        <ul>
+            <li>The organization maintains a balanced workforce across multiple business departments.</li>
+            <li>Employee attrition remains comparatively low, indicating good workforce stability.</li>
+            <li>Departments with experienced employees generally show higher average salaries.</li>
+            <li>Employees with higher performance scores are more likely to receive promotions.</li>
+            <li>Training programs contribute positively to employee performance and productivity.</li>
+            <li>Most employees maintain a satisfactory work-life balance.</li>
+            <li>Overtime is concentrated in selected departments and should be monitored regularly.</li>
+            <li>Average employee experience indicates a healthy mix of junior and experienced professionals.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>Recommendations</h2>
+        <ol>
+            <li>Continue employee engagement activities to maintain low attrition.</li>
+            <li>Provide additional technical and soft-skill training for employees with lower performance scores.</li>
+            <li>Review department-wise salary structures annually to ensure market competitiveness.</li>
+            <li>Monitor overtime and workload distribution to improve employee well-being.</li>
+            <li>Increase internal promotion opportunities to improve employee motivation.</li>
+            <li>Use dashboard insights for workforce planning and hiring decisions.</li>
+            </ol>
+    </section>
+
+    <section class="section">
+         <h2>Future Enhancements</h2>
+        <table>
+            <tr>
+                <th>Enhancement</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Live Database</td>
+                <td>Connect Power BI directly with live MySQL database.</td>
+            </tr>
+            <tr>
+                <td>Dashboard Automation</td>
+                <td>Automatic dashboard refresh using scheduled updates.</td>
+            </tr>
+            <tr>
+                <td>Predictive Analytics</td>
+                <td>Predict employee attrition using Machine Learning.</td>
+            </tr>
+            <tr>
+                <td>Cloud Deployment</td>
+                <td>Deploy dashboard using Microsoft Power BI Service.</td>
+            </tr>
+            <tr>
+                <td>HR Portal Integration</td>
+                <td>Connect dashboard with HR Management System.</td>
+            </tr>
+            <tr>
+                <td>Email Reporting</td>
+                <td>Automatic HR report generation and email delivery.</td>
+            </tr>
+        </table>
+    </section>
+
+    <section class="section">
+        <h2>Project Conclusion</h2>
+        <p>
+            The HR Analytics Dashboard successfully demonstrates an end-to-end data analytics
+            workflow beginning with data storage in MySQL, analytical querying using SQL,
+            data exploration with Python, dashboard development using Power BI and final
+            documentation using HTML and CSS.
+        </p>
+        <p>
+            The dashboard provides valuable insights into workforce demographics,
+            employee performance, salary distribution, promotion history,
+            training participation and employee attrition. These insights help HR
+            professionals make informed decisions regarding employee retention,
+            resource planning and organizational performance.
+        </p>
+        <p>
+            This project also demonstrates practical skills in database management,
+            data analysis, visualization and reporting, making it suitable as an
+            internship portfolio project.
+        </p>
+    </section>
+
+    <section class="section">
+         <h2>Project Highlights</h2>
+        <div class="highlight-container">
+            <div class="highlight-box">
+                <h3>Database</h3>
+                <p>MySQL Database with 150 Employee Records</p>
+            </div>
+            <div class="highlight-box">
+                <h3>SQL</h3>
+                <p>20+ Analytical Queries for HR Insights</p>
+            </div>
+            <div class="highlight-box">
+                <h3>Python</h3>
+                <p>Data Cleaning, EDA & Visualization</p>
+            </div>
+            <div class="highlight-box">
+                <h3>Power BI</h3>
+                <p>Interactive 3-Page HR Analytics Dashboard</p>
+            </div>
+            <div class="highlight-box">
+                <h3>Report</h3>
+                <p>Professional HTML & CSS Documentation</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Acknowledgement</h2>
+        <p>
+            This project was completed as part of my internship at
+            <b>ADKRITY DIGITAL SOLUTIONS PVT LTD</b>.
+            It provided practical experience in applying SQL, Python,
+            Power BI and web technologies to solve business problems
+            through data analytics.
+        </p>
+    </section>
+
+    <footer>
+        <h3>HR Analytics Dashboard</h3>
+        <p>Internship Project</p>
+        <p>
+            Developed By : <b>Manasvi Talati</b>
+        </p>
+        <p>
+            Technologies Used
+            <br><br> MySQL | Python | Power BI | HTML | CSS
+        </p>
+        <p>© 2026 All Rights Reserved</p>
+    </footer>
+
+</div>
+</body>
+</html>
